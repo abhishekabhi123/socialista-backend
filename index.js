@@ -42,6 +42,7 @@ app.use(
       "https://api.prosper-media.cf",
       "https://admin.prosper-media.cf",
       "http://localhost:4001",
+      "https://socialista-app.onrender.com",
     ],
   })
 );
