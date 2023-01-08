@@ -43,6 +43,7 @@ app.use(
       "https://admin.prosper-media.cf",
       "http://localhost:4001",
       "https://socialista-app.onrender.com",
+      "https://socialista-admin.onrender.com",
     ],
   })
 );
