@@ -29,22 +29,13 @@ mongoose.connect(
 );
 
 //middleware
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Credentials", true, "Origin");
-  next();
-});
+var corsOptions = {
+  origin: "*",
+  credentials: true,
+};
+app.use(cors(corsOptions));
 app.use(express.json());
-app.use(
-  cors({
-    origin: [
-      "http://localhost:3009",
-      "https://www.coffetimes.ml",
-      "http://localhost:4001",
-      "https://socialista-app.onrender.com",
-      "https://socialista-admin.onrender.com",
-    ],
-  })
-);
+app.use(cors({}));
 app.use(cookieParser());
 app.use(express.json());
 app.use(helmet());
